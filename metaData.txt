@@ -1,0 +1,29 @@
+1. the api listens on a port and accepts incoming http requests for post,get,put,delete and head.
+2. the api allows a client to connect to it, then create a new user, then edit and delete that user.
+3. the api allows a user to sign in which gives them a token that they can use for subsequent authenticated requests.
+4.the api allows the user to sign out which invalidates their token
+5.the api allows a signed in user to use their token to create a new check.
+6.the api allows a signed in user to edit or delete their check.
+7.in the background, workers perform all the checks at the appropriate times and send alerts to the user when a check changes its state from up to down and vice versa.
+
+need to read!!!!
+
+lib- http,url,stringdecoder,fs,path,stringdecoder,crypto
+https protocol 
+
+__dirname
+
+
+console.log - color: console.log('\x1b[33m%s/x1b[0m','text goes here'); -- works both with console.log,debug
+
+				33- color
+				%s- this is a placeholder for the string	
+
+
+utilies package -- debug (helps in conditional logging to avoid clutter, will hide the logs defined with debug if NODE_DEBUG =anyparametername flag missing)
+
+	var util = require('debug');
+	var debug = util.debuglog('anyparametername');
+
+during startup- 
+	NODE_DEBUG= anyparametername node index.js
